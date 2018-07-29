@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blockchain Client</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/custom.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Blockchain Client</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Wallet Generator
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/make/transaction">Make Transaction</a>
+              <span class="sr-only">(current)</span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/view/transactions">View Transactions</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card-body">
+            <h4 class="card-title">Send Coins</h4>
+            <p class="card-text">Enter transaction details and click on "Generate Transaction" button to generate your transaction</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+
+    <div class="container alert alert-secondary">
+    <form id="transaction_form">
+
+        <div class="row">
+          <label class="col-sm-2">Sender Address:</label>
+          <div class="col-sm-10">
+              <input type="text" name="sender_address" id="sender_address" rows="2" class="form-control"
+                     value="30819f300d06092a864886f70d010101050003818d0030818902818100c85df608dcf14cf69cee56ac849e8edd676cbc85bb8722f229a45b4ce5f36180fd30a0aae2a2680e9a75b318497e6bf136943168d39eecf3b52457f7a26ca5b1dd74235cf37f21b0fdf0bc8be58dfda7fda52ed76aa0f0e8b60082faa113d9a6cc462517a66725c0c72b7e4bb4a00547c5489415749af3016ab71306a0ab8ef90203010001">
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <label class="col-sm-2">Sender Private Key:</label>
+          <div class="col-sm-10">
+              <input type="text" name="sender_private_key" id="sender_private_key" rows="2" class="form-control"
+                     value="3082025e02010002818100c85df608dcf14cf69cee56ac849e8edd676cbc85bb8722f229a45b4ce5f36180fd30a0aae2a2680e9a75b318497e6bf136943168d39eecf3b52457f7a26ca5b1dd74235cf37f21b0fdf0bc8be58dfda7fda52ed76aa0f0e8b60082faa113d9a6cc462517a66725c0c72b7e4bb4a00547c5489415749af3016ab71306a0ab8ef90203010001028180326fbc8c1499c526daefffef635eca559f4036e06f092059d6f3a16be50273cbd57015318ee514ce80411a79059f062aecf336d0cd5c57072dd4dd33dfb5fbab2d1e9d6c6240b16906a4abe9631a311cb9e7547f5ca39f457825e107fac0a60ca1c885bd670da1d599afa16d89d4ecce54a51c0f370d7638fec4ecf07091bd01024100db044fd487f89eed5e3920c6ccaaff65499740ec5d1a5c0378f3446b14b0d854379d08b1b615b85dd24f26d4bbe47ac97556e042eac0c594731b3b9ce0eb85e1024100ea3373f52cccf3bd46b5f8713ce519ae9d759945bcdd108e8876b3a562b21a75146aec1b809296c8eeba3f351ff46f7cf88251aa8c03a718511a25924a22fc19024100ccd57a87ede7135432b441384c807cbdd116b9ec95a2aa7dc0e7db8c3e5caae610e13819648f69cfad7ac3796084ee656deda36e52399a501d5b51e485e32061024100d0c6695a6843940c68da92ccaf5233e0bb31381f38cb8094ef0592039ec5d25c08858050cbfee137e1c859cc4bde24fcacb3cf854f277a6f6cecf80d3ed58d11024100a331c3787e67c6b19f775eddefc1db05f9596959f058172cda9cf55296a5b399764db346f73fbfbbe98004b72cf701f79cb720ed5a499fed3e17ac115f18e795">
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <label class="col-sm-2">Recipient Address:</label>
+          <div class="col-sm-10">
+              <input type="text" name="recipient_address" id="recipient_address" rows="2" class="form-control"
+                     value="30819f300d06092a864886f70d010101050003818d0030818902818100c34e934b9a88c7f92bc5dacf6335ba13a720bcc93559ddd6489855f8b75db2e6f32a4cb31d3133ff00afaaab8621ec4f876859f11feedcf5532c8c00a4f16e4909e99a2f85e8e7f18628a693a427a748812b937c70a9b13cc954759fc5756f971ac6aad1a32ae7f9bf379fbc56e4c45cf27f3d82fcc449a6292dfa30241e3b430203010001">
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <label class="col-sm-2">Amount to Send:</label>
+          <div class="col-sm-10">
+            <input type="text" name="amount" id="amount" rows="2" class="form-control" value="11">
+          </div>
+        </div>
+
+        <br>
+
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <input type="button" id="generate_transaction" class="btn btn-primary btn-lg" value="Generate Transaction">
+          </div>
+        </div>
+
+        <br>
+
+    </form>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal modal-alert fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <div class="modal-title col-md-10">Confirm transaction details, enter a blockchain node url and click on "Confirm Transaction" to finalize your transaction.</div>
+            <button type="button" class="close col-md-2" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+
+          <div class="modal-body">
+
+            <form id="confirmation_transaction_form">
+
+                <div class="row">
+                  <label class="col-sm-12">Sender Address:</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="sender_address" id="confirmation_sender_address" rows="2" class="form-control" readonly>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-sm-12">Recipient Address:</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="recipient_address" id="confirmation_recipient_address" rows="2" class="form-control" readonly>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-sm-12">Amount to Send:</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="amount" id="confirmation_amount" rows="2" class="form-control" readonly>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <label class="col-sm-12">Transaction Signature:</label>
+                  <div class="col-sm-12">
+                    <input type="text" name="signature" id="transaction_signature" rows="2" class="form-control" readonly>
+                  </div>
+                </div>
+
+            </form>
+
+
+            <div class="row">
+              <label class="col-sm-12">Blockchain Node URL:</label>
+              <div class="col-sm-12">
+                <input type="text" name="node_url" id="node_url" rows="2" class="form-control" value="http://127.0.0.1:5000,http://127.0.0.1:5001,http://127.0.0.1:5002">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+            <button type="button" id="button_confirm_transaction" class="btn btn-success">Confirm Transaction</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Alert Message for successful transaction -->
+    <div class="modal modal-alert fade" id="success_transaction_modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            <div class="alert alert-success" role="alert">
+              <h4 class="alert-heading">Successful Transaction!</h4>
+              <p>You successfully completed your transaction. It will be added to the next block.</p>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" id="button_confirm_transaction" class="btn btn-success" data-dismiss="modal">OK</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+
+      $(function () {
+          $("#generate_transaction").click(function () {
+
+            $.ajax({
+              url: "/generate/transaction",
+              type: "POST",
+              dataType : 'json',
+              data: $('#transaction_form').serialize(),
+              success: function(response){
+
+                document.getElementById("confirmation_sender_address").value = response["transaction"]["sender_address"];
+                document.getElementById("confirmation_recipient_address").value = response["transaction"]["recipient_address"];
+                document.getElementById("confirmation_amount").value = response["transaction"]["value"];
+                document.getElementById("transaction_signature").value = response["signature"];
+
+                $("#basicModal").modal('show');
+
+              },
+              error: function(error){
+                console.log(error);
+              }
+            });
+
+          });
+      });
+
+
+      $(function () {
+          $("#button_confirm_transaction").click(function () {
+              console.log($('#confirmation_transaction_form').serialize());
+              var nodes0 = document.getElementById('node_url').value;
+              console.log(nodes0);
+              var nodes1 = nodes0.replace(/\s*,\s*/g,",");
+              var nodes = nodes1.split(",");
+              for (var i=0; i<nodes.length; i++) {
+                  $.ajax({
+                      url: nodes[i] + "/transactions/new",
+                      type: "POST",
+                      headers: {'Access-Control-Allow-Origin':'*'},
+                      dataType : 'json',
+                      data: $('#confirmation_transaction_form').serialize(),
+                      success: function(response){
+
+                          //reset both forms
+                          $("#transaction_form")[0].reset();
+                          $("#confirmation_transaction_form")[0].reset();
+
+                          //clean text boxes
+                          $("#sender_address").val("");
+                          $("#sender_private_key").val("");
+                          $("#recipient_address").val("");
+                          $("#amount").val("");
+
+                          $("#basicModal").modal('hide');
+                          $("#success_transaction_modal").modal('show');
+
+                      },
+                      error: function(error){
+                          console.log(error);
+                      }
+                  });
+              }
+          });
+      });
+    </script>
+
+
+  </body>
+
+</html>

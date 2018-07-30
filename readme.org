@@ -1,0 +1,54 @@
+Today. we will talk about a solution to a problem that can
+only happen in Innova City.
+
+What is the problem.  It is the 61.4TWh being consumed that rivals the
+consumption of a whole nation Switzerland.
+
+How did we get there?
+
+One must understand the scaling trends in technology.  In principle
+there has been an unprecedented rise in computer power, in particular
+the performance as measured by operations per second has really been
+scaling exponentially with time.
+
+So although there has been a scalling in performance, chip frequency
+has not increased for many years now.  This is primarily because there
+is a fundamental thermal ceiling we are hitting.  That is our silicon
+is getting too hot.
+
+Because of this thermal ceiling, the power per area has become more or
+less constant,  and any benefit in operations per second has to come
+from an equivalent lowering of energy per op.
+
+This is clearly seen in the following graph.  As you can see here for
+a processor the performance scales together with energy per op.  And
+the curve is steep, this means that you are burning a lot of power to
+reach a certain performance level.  Chip manufacturers realize this
+and have pushed back from this scaling in favor of multicore chips,
+i.e. choose more power efficient points and reach the same level of
+performance by having more of them in parallel.
+
+The extreme of this is designing very energy performing hardware for
+very specific tasks such as with asics.  The block chain community
+realizes this arms race and has invented protocols that make it hard
+for specilized hardware to thrive.
+
+One example of this is the push to move more of the computation to the
+memory because memory has not scaled well.  As you see in this figure
+if you are spending most of your time fetching data from memory then
+there are dimishing returns for making better hardware.
+
+But all this push to hardware is particular troubling because of the
+emphasis on performance or time to completion.
+
+Our solution proposed to turn this incentive on its head by
+incentivizing efficiency as opposed to performance.
+
+This is where innova city comes in, only in a environment in which
+every one's power usage is free from brokers, an environment in which
+I can accurately tell you how much power I have used and when.  Energy
+which consumption which is more transparent can we offer an
+alternative to this arms race.
+
+Here is our solution.  We will show in our demo, the typical
+blockchain network, client which sends transactions to be validated

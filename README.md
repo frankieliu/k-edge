@@ -6,7 +6,11 @@
 # Dependencies
   - tmux
 # Running
-  - create a set of panels in tmux
+  - start a tmux session: $ tmux
+  - create a set of panels in tmux (use create_panes.sh)
+  
+  | a | b |
+  | d | c |
 
     | 0 | 1  |
     |   |    |

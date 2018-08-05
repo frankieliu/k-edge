@@ -132,8 +132,9 @@ minerResults = {}
 #Each miner calculates the proof
 for miner in miners:
     result = m.proof_of_work(lastHash)
-    #Save each miner's result
+    minerResults[miner] = result
 
+#sort on keys
 #alpha node validates shortest
 #other validators validate alpha's choice
 
